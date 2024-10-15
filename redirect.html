@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirect - TikTokAPItest-App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Login Successful!</h1>
+    </header>
+    <main>
+        <script>
+            const urlParams = new URLSearchParams(window.location.search);
+            const authCode = urlParams.get('code');
+            const state = urlParams.get('state');
+
+            // Display the authorization code and state
+            document.write('<p>Your authorization code is: ' + authCode + '</p>');
+            document.write('<p>State parameter: ' + state + '</p>');
+
+            // Here you can send the authCode to your server to get an access token
+            // Example: sendAuthCodeToServer(authCode, state);
+        </script>
+        <a href="index.html">Back to Home</a>
+    </main>
+    <footer>
+        <p>&copy; 2024 TikTokAPItest-App</p>
+    </footer>
+</body>
+</html>
